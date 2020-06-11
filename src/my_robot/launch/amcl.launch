@@ -5,6 +5,10 @@
   <!-- Map Server -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
+  <!-- Place map frame at odometry frame -->
+  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
+        args="0 0 0 0 0 0 map odom 100"/>
+
   <!-- AMCL Node -->
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
     <remap from="scan" to="my_robot/laser/scan"/>
@@ -16,6 +20,8 @@
     <param name="update_min_d" value="0.25"/>
 
     <!-- Laser -->
+    <param name="laser_model_type" value="likelihood_field"/>
+    <param name="laser_likelihood_max_dist" value="2.0"/>
     <param name="laser_max_beams" value="20"/>
     <param name="laser_z_rand" value="0.05"/>
     <param name="laser_z_hit" value="0.95"/>
