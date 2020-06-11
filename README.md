@@ -5,6 +5,8 @@ The project consits of solving the problem of localization via a given map.
 The localization is performed on a simulation enviromnet in Gazebo b
 In order to pass this project one must complete the [rubric points][Rubric Points].
 
+![Where Am I]
+
 ## Prerequisites
 
 * `ros == kinetic`
@@ -31,3 +33,4 @@ This project follows [Google's C++ Style Guide].
 [Google's C++ Style Guide]: https://google.github.io/styleguide/cppguide.html
 [Rubric Points]: docs/RubricPoints.md
 [.clang-format]: .clang-format
+[Where Am I]: images/where-am-i.png
