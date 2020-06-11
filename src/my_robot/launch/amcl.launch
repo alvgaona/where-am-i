@@ -7,7 +7,7 @@
 
   <!-- Place map frame at odometry frame -->
   <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
-        args="0 0 0 0 0 0 map odom 100"/>
+        args="0 0 0.1 0 0 0 map odom 100"/>
 
   <!-- AMCL Node -->
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
