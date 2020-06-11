@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Robot pose -->
-  <arg name="x" default="-4.0"/>
+  <arg name="x" default="0"/>
   <arg name="y" default="0"/>
   <arg name="z" default="0"/>
   <arg name="roll" default="0"/>
@@ -10,6 +10,7 @@
 
   <!-- Launch other relevant files-->
   <include file="$(find my_robot)/launch/robot_description.launch"/>
+  <include file="$(find my_robot)/launch/amcl.launch"/>
 
   <!-- World File -->
   <arg name="world_file" default="$(find my_robot)/worlds/my-office.world"/>
